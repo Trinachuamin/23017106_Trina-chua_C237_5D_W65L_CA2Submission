@@ -19,10 +19,14 @@ const upload = multer({ storage: storage }); // Initialize multer with the defin
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'simple_recipe_book' // Database name
+    // host: 'localhost',
+    // user: 'root',
+    // password: '',
+    // database: 'simple_recipe_book' // Database name
+    host: 'alwaysdata.com',
+    user: 'trina1',
+    password: ' ',
+    database: 'trina1_miniproject'
 });
 
 // Connect to MySQL database
