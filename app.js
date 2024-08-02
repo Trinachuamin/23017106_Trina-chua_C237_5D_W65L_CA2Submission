@@ -22,10 +22,10 @@ const connection = mysql.createConnection({
     // host: 'localhost',
     // user: 'root',
     // password: '',
-    // database: 'simple_recipe_book' // Database name
-    host: 'alwaysdata.com',
+    // database: 'simple_recipe_book'
+    host: 'mysql-trina1.alwaysdata.net',
     user: 'trina1',
-    password: ' ',
+    password: 'Roygbp@210406',
     database: 'trina1_miniproject'
 });
 
