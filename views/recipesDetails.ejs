@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title><%= recipe.titles %> - Recipe Details</title> 
+    <link rel="stylesheet" href="/css/styles.css"> 
+</head>
+
+<body background="https://i.pinimg.com/564x/7a/d6/f9/7ad6f92eb2af83036d0e013dde7f54ea.jpg">
+    <%- include('partials/header') %> 
+
+    <div class="container my-5"> 
+        <div class="container-one p-5"> 
+            <h2><%= recipe.titles %></h2> 
+            <div>
+                <img src="/img/<%= recipe.images %>" class="img-fluid mb-4 recipe-image" alt="Recipe Image"> 
+            </div>
+
+            <div class="recipe-content"> 
+                <h3>Category: <%= recipe.categories %></h3> 
+                <h4>Ingredients</h4>
+                <p><%= recipe.ingredients %></p> 
+                <h4>Instructions</h4>
+                <p><%= recipe.instructions %></p> 
+            </div><br>
+
+            <h4>Rating:
+                <% if (currentRating) { %>
+                    <%= currentRating %>/5 
+                <% } else { %>
+                    Not rated yet 
+                <% } %>
+            </h4>
+            <form action="/recipesDetails/<%= recipe.recipeid %>/rate" method="POST" class="mt-4"> <!-- Form to submit a new rating -->
+                <label for="rating" class="form-label">Rate this recipe:</label>
+                <div class="star-rating"> 
+                    <input type="radio" id="5-stars" name="rating" value="5">
+                    <label for="5-stars" class="star">&#9733;</label> 
+                    <input type="radio" id="4-stars" name="rating" value="4">
+                    <label for="4-stars" class="star">&#9733;</label> 
+                    <input type="radio" id="3-stars" name="rating" value="3">
+                    <label for="3-stars" class="star">&#9733;</label> 
+                    <input type="radio" id="2-stars" name="rating" value="2">
+                    <label for="2-stars" class="star">&#9733;</label> 
+                    <input type="radio" id="1-star" name="rating" value="1">
+                    <label for="1-star" class="star">&#9733;</label> 
+                </div><br>
+                <button type="submit" class="btn btn-primary btn-sm custom-btn mt-2">Submit Rating</button> 
+            </form>
+            <a href="/" class="btn btn-primary mt-3">Back to Recipes</a> 
+            <a href="/recipes/edit/<%= recipe.recipeid %>" class="btn btn-secondary btn-sm custom-btn mt-3">Update Recipe</a> 
+        </div>
+    </div>
+</body>
+
+</html>

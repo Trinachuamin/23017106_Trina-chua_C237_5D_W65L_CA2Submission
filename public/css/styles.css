@@ -1,0 +1,235 @@
+/* Importing the Patrick Hand font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Patrick Hand', Arial, sans-serif; /* Set the font for the body to Patrick Hand, with Arial and sans-serif as fallbacks */
+    background: url('https://i.pinimg.com/564x/7a/d6/f9/7ad6f92eb2af83036d0e013dde7f54ea.jpg') no-repeat center center fixed; /* Set the background image with fixed position */
+    background-size: cover; /* Ensure the background image covers the entire background */
+    color: white; /* Set the text color to white */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    background-attachment: fixed; /* Keep the background image fixed */
+}
+
+/* Header Styles */
+.header {
+    position: relative; /* Position relative for overlay */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 100px 0; /* Padding for spacing */
+    text-align: center; /* Center the text */
+}
+
+.header .overlay {
+    position: absolute; /* Absolute positioning for overlay */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Place it above other elements */
+}
+
+.header .container {
+    position: relative; /* Position relative for z-index */
+    z-index: 2; /* Place it above the overlay */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: rgb(255, 255, 255); /* Set link color to white */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(51, 31, 31); /* Change link color on hover */
+    background-color: white; /* Change background color on hover */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+.navbar-brand {
+    color: white !important; /* Force the brand link color to white */
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
+    border: none; /* Remove border */
+}
+
+.card img {
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Cover the entire image area */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+  
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Button Styles for All Buttons */
+.btn {
+    background-color: #000000; /* Black background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Inline block display */
+}
+
+.btn:hover {
+    background-color: #7993ec; /* Change background color on hover */
+}
+
+.btn-sm {
+    padding: 5px 10px; /* Smaller padding for small button */
+    font-size: 14px; /* Smaller font size for small button */
+}
+
+/* Container Styles */
+.container-custom {
+    padding-left: 2rem; /* Custom left padding */
+    padding-right: 2rem; /* Custom right padding */
+}
+
+.center-image {
+    display: block; /* Block display for centering */
+    margin-left: auto; /* Auto left margin for centering */
+    margin-right: auto; /* Auto right margin for centering */
+    max-width: 100%; /* Max width 100% for responsiveness */
+    height: auto; /* Auto height for responsiveness */
+}
+
+/* Recipe Details Styles */
+.recipe-container {
+    max-width: 900px; /* Max width for container */
+    margin: 0 auto; /* Center the container */
+    padding: 2rem; /* Padding for spacing */
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.recipe-title {
+    font-family: 'Playfair Display', serif; /* Custom font for title */
+    text-align: center; /* Center the title */
+    margin-bottom: 1rem; /* Margin below the title */
+}
+
+.recipe-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-black background */
+    color: white; /* White text for better contrast */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Optional: Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.recipe-image {
+    width: 50%; /* Adjust the percentage as needed */
+    max-width: 300px; /* Optional: Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+.recipe-meta {
+    text-align: center; /* Center the meta information */
+    font-size: 1.1rem; /* Font size for meta */
+    color: #888; /* Grey color for meta */
+    margin-bottom: 1.5rem; /* Margin below meta */
+}
+
+.recipe-section {
+    margin-bottom: 2rem; /* Margin below each section */
+}
+
+.recipe-section h4 {
+    font-family: 'Playfair Display', serif; /* Custom font for section title */
+    margin-bottom: 1rem; /* Margin below section title */
+}
+
+.recipe-section ul {
+    list-style: none; /* Remove list styling */
+    padding: 0; /* Remove padding */
+}
+
+.recipe-section ul li {
+    margin-bottom: 0.5rem; /* Margin below each list item */
+}
+
+.notes {
+    color: #888; /* Grey color for notes */
+    font-size: 0.9rem; /* Font size for notes */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    border: 1px solid #000; /* Black border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for spacing */
+    width: 250px; /* Fixed width */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: auto; /* Align to right */
+}
+
+.search-bar input[type="search"] {
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    padding: 5px 10px; /* Padding for spacing */
+    flex-grow: 1; /* Allow input to grow */
+}
+
+.search-bar button {
+    background: none; /* No background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.search-bar img {
+    width: 18px; /* Set width for search icon */
+    height: 18px; /* Set height for search icon */
+}
+
+/* Star Rating Styles */
+.star-rating {
+    direction: ltr; /* Left-to-right direction */
+    display: inline-flex; /* Inline flexbox */
+    flex-direction: row-reverse; /* Reverse order of stars */
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.star-rating label {
+    font-size: 2rem; /* Font size for stars */
+    color: #ccc; /* Default star color */
+    cursor: pointer; /* Pointer cursor for stars */
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold; /* Gold color for selected stars */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold; /* Gold color on hover */
+}
+
+/* my comments page background */
+.semi-black-background {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-black background */
+    color: white; /* White text for better contrast */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Optional: Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in the width */
+}

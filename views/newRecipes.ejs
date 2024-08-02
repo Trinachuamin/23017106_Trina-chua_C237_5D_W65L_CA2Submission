@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Add New Recipe</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body background="https://i.pinimg.com/564x/7a/d6/f9/7ad6f92eb2af83036d0e013dde7f54ea.jpg">
+
+    <%- include('partials/header') %>
+
+        <div class="container">
+            <h2>Add New Recipe</h2>
+            <form action="/newRecipes" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="titles">Title:</label>
+                    <input type="text" class="form-control" id="titles" name="titles" required>
+                </div>
+                <div class="form-group">
+                    <label for="ingredients">Ingredients:</label>
+                    <textarea class="form-control" id="ingredients" name="ingredients" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Instructions:</label>
+                    <textarea class="form-control" id="instructions" name="instructions" height="20px"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categories">Category:</label>
+                    <input type="text" class="form-control" id="categories" name="categories" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label><br>
+                    <input type="file" class="form-control-file" id="image" name="image" required>
+                </div><br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Add Recipe</button>
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
